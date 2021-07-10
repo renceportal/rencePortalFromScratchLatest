@@ -1,7 +1,7 @@
 import { Component, HostBinding, HostListener, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { NavBarService } from '@rence/core/services';
+import { AuthService, NavBarService } from '@rence/core/services';
 import { untilDestroyed, UntilDestroy } from '@ngneat/until-destroy';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
@@ -23,7 +23,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // @HostListener('window:resize', [ '$event' ])
 
-  constructor(private ngZone: NgZone,
+  constructor(
+    private authService: AuthService,
+    private ngZone: NgZone,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private navBarService: NavBarService,
@@ -71,6 +73,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.authService.autoLogin();
   }
 
   ngOnDestroy(): void {
