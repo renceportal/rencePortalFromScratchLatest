@@ -1,0 +1,53 @@
+@import "variables"; 
+
+#header { 
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.1); 
+  .navbar-custom { 
+    background-color: $white; 
+    color: $gray-900; 
+    margin-left: 240px; 
+  } 
+  .button-menu-mobile { 
+    background-color: $white; 
+    .mdi { 
+      font-size: 2rem; 
+      &:hover { 
+        color: $primary; 
+      }
+    }
+  } 
+
+  .user { 
+    display: flex; 
+    align-items: center; 
+    height: 70px; 
+    .name { 
+      font-weight: bold; 
+      line-height: 28px; 
+    } 
+    .navigation { 
+      font-size: 12px; 
+      line-height: 35px; 
+      a { 
+        color: $primary; 
+        cursor: pointer; 
+      } 
+    } 
+    .logout-link { 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      &:hover { 
+        span, .mdi { 
+          color: $primary !important; 
+        }
+      }
+    }
+  } 
+
+  .mdi {
+    color: $gray-500;
+    font-size: 1.25rem;
+  } 
+
+} 

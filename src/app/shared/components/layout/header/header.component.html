@@ -1,1 +1,34 @@
-<p>header works!</p>
+<div id="header" class="topbar bg-white"> 
+  <div class="topbar-left bg-white"> 
+    <div class="d-flex"> 
+      <button class="button-menu-mobile open-left waves-light waves-effect mr-3" (click)="toggle()"> 
+        <i class="mdi mdi-menu"></i> 
+      </button> 
+      <a routerLink="/" class="logo d-flex align-items-center"> 
+        <img src="assets/images/bcc-logo-small.png" alt="BCC Logo" height="42"> 
+        <div>&nbsp;Rence <span class="text-muted">Portal</span> </div> 
+      </a> 
+    </div> 
+  </div> 
+
+  <nav class="navbar-custom" *ngIf="username"> 
+    <ul class="list-unstyled float-right text-right mb-0 mr-2 user"> 
+      <li class="list-inline-item text-left mr-4"> 
+        <div class="d-flex align-items-center"> 
+          <i class="mdi mdi-account-circle"></i> 
+          <div class="ml-1"> 
+            <div class="text-black-50">{{ username }}</div> 
+          </div> 
+        </div> 
+      </li> 
+
+      <li class="list-inline-item mx-2"> 
+        <div class="logout-link"> 
+        <!-- <div routerLink="/logout" class="logout-link"> -->  
+          <i class="mdi mdi-logout"></i> 
+          <span class="text-black-50 pl-1" (click)="logout()">Logout</span> 
+        </div> 
+      </li> 
+    </ul> 
+  </nav> 
+</div> 
