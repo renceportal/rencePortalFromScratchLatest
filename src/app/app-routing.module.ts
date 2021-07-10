@@ -4,10 +4,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SecureLayoutComponent } from './shared/components/layout/base/secure-layout.component';
   
 const routes: Routes = [ 
-  // { 
-  //   path: '', 
-  //   loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) 
-  // }, 
+  { 
+    path: '', 
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  }, 
   { 
     path: '', 
     component: SecureLayoutComponent, 
@@ -19,7 +19,7 @@ const routes: Routes = [
         loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) 
       } 
     ] 
-  },
+  }
 
   // { 
   //   // path: 'unauthorized', 

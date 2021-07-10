@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'; 
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy'; 
-import { NavBarService } from '@rence/core/services';
+import { AuthService, NavBarService } from '@rence/core/services';
 
 @UntilDestroy() 
 @Component({ 
@@ -20,9 +20,7 @@ export class HeaderComponent implements OnInit {
 
   
 
-  constructor( 
-
-              // private authService: AuthService, 
+  constructor(private authService: AuthService, 
               private ns: NavBarService) { 
 
 // this.collapse = window.innerWidth <= 991; 
