@@ -1,0 +1,120 @@
+/* ===========
+   Common
+ =============*/
+
+body {
+  background-color: $light9;
+  margin: 0;
+  color: $gray-900;
+  overflow-x: hidden !important;
+  font-size: $font-size-base;
+  font-family: $font-primary;
+
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+html {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+  background: $light5;
+}
+
+* {
+  outline: none !important;
+}
+
+a, button.btn-link {
+  &:hover, &:active, &:focus {
+    outline: 0 !important;
+    //text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+a {
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
+.container-alt {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer {
+  background-color: $light9;
+  bottom: 0;
+  color: $dark;
+  padding: 20px 2px;
+  margin: 0 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+  border-top: 1px solid $lightgray;
+}
+
+#wrapper {
+  height: $height;
+  overflow: hidden;
+  width: $width;
+}
+
+.page {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.card-box {
+  padding: 20px;
+  border: 1px solid rgba(54, 64, 74, .08);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-clip: padding-box;
+  margin-bottom: 20px;
+  background-color: $white;
+}
+
+.header-title {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.social-links {
+  li {
+    a {
+      -webkit-border-radius: 50%;
+      background: #EFF0F4;
+      border-radius: 50%;
+      color: #7A7676;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      width: 30px;
+    }
+  }
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.bg-light {
+  background-color: $light-alt !important;
+}

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/notification/style/index.min.css";
+
+// ng-busy
+@import "~ng-busy/src/style/busy.css";
+
+@import "~ng-zorro-antd/modal/style/index.min.css";
+
+// material design icon
+// cheat sheet https://cdn.materialdesignicons.com/5.4.55/
+@import "~@mdi/font/css/materialdesignicons.min.css";
+
+@import "assets/scss/style.scss";
