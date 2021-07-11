@@ -58,7 +58,7 @@ export class AuthComponent implements OnInit {
       this.busy = autObs.subscribe((results) => { 
         this.notification.success(`${notifMessage} has been successful.`, ``); 
         this.reset(); 
-        this.route.navigateByUrl('/recipes'); 
+        this.route.navigateByUrl('/dashboard'); 
       }, error => { 
         this.notification.error(`${notifMessage} has been denied.`, `${error?.error?.error?.message}`); 
       }) 

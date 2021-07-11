@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router'; 
 import { SecureLayoutComponent } from './shared/components/layout/base/secure-layout.component';
+import { AuthGuard } from '@rence/core/guards/auth-guard.service';
   
 const routes: Routes = [ 
   { 
@@ -15,7 +16,7 @@ const routes: Routes = [
       { 
         path: 'dashboard', 
         data: { title: 'Dashboard' }, 
-        // canActivateChild: [ AuthorizedGuard ], 
+        canActivateChild: [ AuthGuard ], 
         loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) 
       } 
     ] 
