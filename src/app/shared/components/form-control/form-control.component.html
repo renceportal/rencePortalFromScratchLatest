@@ -1,0 +1,6 @@
+<div class="form-control-wrapper" *ngIf="fcn" tabindex="-1" 
+     [ngClass]="{'-highlighted': isHighlighted }" [class]="fromParentClass"> 
+  <ng-content></ng-content> 
+  <img class="form-control-wrapper__excl-mark" src="assets/icons/error.svg" (mouseover)="showError=true" (mouseout)="showError=false"> 
+  <div class="form-control-wrapper__error" *ngIf="showError">{{ getError() }} 
+</div> 
