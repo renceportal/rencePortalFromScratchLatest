@@ -31,24 +31,24 @@ export class AppComponent implements OnInit, OnDestroy {
     private navBarService: NavBarService,
     private titleService: Title) {
 
-    window.onresize = (e) => {
-      if (e.isTrusted) {
-        this.getWindowSize();
-        ngZone.run(() => {
-          this.isForced = false;
-          this.isEnlarged = this.compactMenu;
-        });
-      }
-    };
+    // window.onresize = (e) => {
+    //   if (e.isTrusted) {
+    //     this.getWindowSize();
+    //     ngZone.run(() => {
+    //       this.isForced = false;
+    //       this.isEnlarged = this.compactMenu;
+    //     });
+    //   }
+    // };
 
-    this.activatedRoute.url
-      .pipe(untilDestroyed(this))
-      .subscribe(() => {
-        this.getWindowSize();
-        ngZone.run(() => {
-          this.isEnlarged = this.compactMenu;
-        });
-      });
+    // this.activatedRoute.url
+    //   .pipe(untilDestroyed(this))
+    //   .subscribe(() => {
+    //     this.getWindowSize();
+    //     ngZone.run(() => {
+    //       this.isEnlarged = this.compactMenu;
+    //     });
+    //   });
 
     // Toggle menu
     navBarService.sideBarCollapsed
@@ -62,15 +62,15 @@ export class AppComponent implements OnInit, OnDestroy {
       });
   }
 
-  private getWindowSize(): void {
-    if (window.innerWidth <= 991) {
-      this.compactMenu = true;
-      this.navBarService.collapseSideBar(true);
-    } else {
-      this.compactMenu = false;
-      this.navBarService.collapseSideBar(false);
-    }
-  }
+  // private getWindowSize(): void {
+  //   if (window.innerWidth <= 991) {
+  //     this.compactMenu = true;
+  //     this.navBarService.collapseSideBar(true);
+  //   } else {
+  //     this.compactMenu = false;
+  //     this.navBarService.collapseSideBar(false);
+  //   }
+  // }
 
   ngOnInit(): void {
     this.authService.autoLogin();
