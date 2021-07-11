@@ -1,1 +1,40 @@
-<p>auth works!</p>
+<div class="align-middle" style="height: 100vh; background-image: url('assets/img/vector8.jpg');"> 
+    <div class="align-middle" style="height: 30vh;"></div> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-6 offset-lg-3 bg-secondary p-4"> 
+          <form [formGroup]="form" (submit)="submit()"> 
+              <div class="form-group"> 
+                <label for="email" class="font-weight-bold text-light">E-Mail</label> 
+                <app-form-control> 
+                  <input type="email" id="email" class="form-control" placeholder="Email" formControlName="email"> 
+                </app-form-control> 
+                <small id="passwordHelpBlock" class="form-text text-muted"> 
+                  Your email must be an email format. 
+                </small> 
+              </div> 
+  
+              <div class="form-group"> 
+                <label for="password" class="font-weight-bold text-light">Password</label> 
+                <app-form-control> 
+                  <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password"> 
+                </app-form-control> 
+                <small id="passwordHelpBlock" class="form-text text-muted"> 
+                  Your password must be 6 characters long. 
+                </small> 
+              </div> 
+              <div> 
+                <button class="btn btn-primary mr-2" type="submit"> 
+                  {{ isLoginMode ? 'Login' : 'Sign Up' }} 
+                </button> 
+                <button class="btn btn-primary" type="button" (click)="onSwitchMode()"> 
+                  Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }} 
+                </button> 
+              </div> 
+          </form> 
+        </div> 
+      </div> 
+    </div> 
+  
+    <div [ngBusy]="{ busy: busy, disableAnimation: true, message: 'Submit in progress...' }"></div> 
+  </div> 

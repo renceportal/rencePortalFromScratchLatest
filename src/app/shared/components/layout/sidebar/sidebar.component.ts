@@ -13,7 +13,7 @@ export class SidebarComponent implements OnInit {
     maintenance: 'maintenance' 
   }; 
 
-  activeMenu: string | undefined; 
+  activeMenu: string = ''; 
 
   constructor() { } 
 

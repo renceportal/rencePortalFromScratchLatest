@@ -88,8 +88,8 @@ export class AuthService {
     localStorage.setItem('access_token', token); 
   } 
 
-  public getAccessToken(): string | null { 
-    return localStorage.getItem('access_token'); 
+  public getAccessToken(): string { 
+    return localStorage.getItem('access_token') || ''; 
   } 
 
   public removeToken(): void { 
