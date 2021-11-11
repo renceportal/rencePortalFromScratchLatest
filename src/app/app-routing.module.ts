@@ -6,6 +6,7 @@ import { AuthGuard } from '@rence/core/guards/auth-guard.service';
   
 const routes: Routes = [ 
   { 
+    // THIS IS THE LOGIN PAGE
     path: '', 
     loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   }, 

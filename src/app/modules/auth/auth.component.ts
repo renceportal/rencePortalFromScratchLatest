@@ -25,6 +25,7 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void { 
     this.buildForm(); 
 
+    // THIS IS TO REDIRECT TO DASHBOARD IF THE USER ENTER AGAIN THE MAIN URL
     if (this.as.getAccessToken()) { 
       this.route.navigateByUrl('/dashboard'); 
     } 
