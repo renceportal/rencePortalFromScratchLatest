@@ -73,6 +73,8 @@ export class AppComponent implements OnInit, OnDestroy {
   // }
 
   ngOnInit(): void {
+    // THIS IS FOR REFRESH URL, SO THAT YOUR CREDENTIALS IN this.isLoggedIn$ will not remove 
+    // (your information is here like email, id, token) that you used in your application
     this.authService.autoLogin();
   }
 
